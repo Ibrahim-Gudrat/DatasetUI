@@ -14,7 +14,19 @@ public class Program {
         System.out.println("Starting");
         readData();
         System.out.println("Welcome to Console UI Based Program");
+
+        while(true) {
+
+        }
     }
+
+    public void menu() {
+
+        System.out.println("Select operation: \n" +
+                "");
+
+    }
+
 
     public void readData() {
 
