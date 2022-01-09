@@ -4,9 +4,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class DataSet {
     private final AtomicInteger count = new AtomicInteger(0);
-    private Integer Id;
+    private Integer id;
     private Date date;
-    private LocalTime time;
     private String location;
     private String operator;
     private String flight;
@@ -22,10 +21,9 @@ public class DataSet {
     private String summary;
     private String clustID;
 
-    public DataSet(Integer id, Date date, LocalTime time, String location, String operator, String flight, String route, String type, String registration, String cnIN, Integer aboard, Integer fatalities, Integer ground, Integer survivors, Float survivalRate, String summary, String clustID) {
-        Id = count.incrementAndGet();
+    public DataSet(Date date, String location, String operator, String flight, String route, String type, String registration, String cnIN, Integer aboard, Integer fatalities, Integer ground, Integer survivors, Float survivalRate, String summary, String clustID) {
+        id = count.incrementAndGet();
         this.date = date;
-        this.time = time;
         this.location = location;
         this.operator = operator;
         this.flight = flight;
@@ -43,11 +41,7 @@ public class DataSet {
     }
 
     public Integer getId() {
-        return Id;
-    }
-
-    public void setId(Integer id) {
-        Id = id;
+        return id;
     }
 
     public Date getDate() {
@@ -56,14 +50,6 @@ public class DataSet {
 
     public void setDate(Date date) {
         this.date = date;
-    }
-
-    public LocalTime getTime() {
-        return time;
-    }
-
-    public void setTime(LocalTime time) {
-        this.time = time;
     }
 
     public String getLocation() {
